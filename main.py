@@ -379,14 +379,12 @@ def save(filepath: str, assembled_text: list, assembled_data: list):
     os.system('cls')
 
 
-
-
 options = ["Assemble", "Save assembled file", "Exit"]
 filepath = ""
 assembled_text = []
 assembled_data = []
 
-for c in range(10):
+while True:
     choice = selection_menu(options).lower()
 
     if choice == "assemble":
@@ -396,7 +394,6 @@ for c in range(10):
     elif choice == "save assembled file":
         if filepath != '':
             save(filepath, assembled_text, assembled_data)
-
 
     elif choice == "exit":
         break
